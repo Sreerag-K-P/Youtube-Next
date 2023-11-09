@@ -1,7 +1,7 @@
 export default async function getDataItems(selected) {
   const response = await fetch(
     `https://youtube-v31.p.rapidapi.com/${selected}`,
-    { cache: "no-store" },
+
     {
       method: "GET",
       params: {
