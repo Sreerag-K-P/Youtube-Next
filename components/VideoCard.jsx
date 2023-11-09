@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   demoChannelTitle,
   demoChannelUrl,
+  demoProfilePicture,
   demoVideoTitle,
   demoVideoUrl,
 } from "../utils/constants";
@@ -18,7 +19,7 @@ const VideoCard = ({
     <div className="xs:w-full sm:w-[358px] md:w-[320px] drop-shadow-xl rounded-none">
       <Link href={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <Image
-          src={snippet?.thumbnails?.high?.url}
+          src={snippet?.thumbnails?.high?.url || demoProfilePicture}
           alt={snippet?.title}
           width={400}
           height={400}
